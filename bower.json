@@ -1,0 +1,12 @@
+{
+  "name": "simple",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lelandriordan/simple",
+  "private": true,
+  "authors": [
+    "Leland Riordan <leland@lelandriordan.com>"
+  ],
+  "description": "A simple WordPress theme",
+  "license": "GPL",
+  "private": true
+}
