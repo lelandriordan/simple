@@ -194,8 +194,7 @@ img {
 .button-close {
   z-index: 999;
   color: #4d4d4d;
-  background-color: white;
-  border-style: dotted; }
+  background-color: white; }
 
 .site-navigation.active {
   right: 0; }
@@ -262,10 +261,10 @@ a:hover .article-image {
   line-height: 1.5; }
 
 .article-content a {
-  color: #666;
+  color: #737373;
   text-decoration: none;
   padding: 0 2px;
-  border-bottom: 2px dotted #aaa; }
+  border-bottom: 2px dotted #c8c8c8; }
 
 .article-content a:hover,
 .article-content a:focus {
@@ -417,5 +416,19 @@ a:hover .article-image {
 /*.gallery-item {
   padding: 10px;
 }*/
-.admin-bar .site-navigation {
-  top: 32px !important; }
+.admin-bar .site-header {
+  top: 32px; }
+
+.admin-bar .button-navigation,
+.admin-bar .site-navigation.active .button-close {
+  top: 32px; }
+
+.admin-bar .site-navigation ul {
+  margin-top: 132px; }
+
+.home .button-navigation,
+.home .site-navigation.active .button-close {
+  top: 0; }
+
+.home .site-navigation ul {
+  margin-top: 150px; }

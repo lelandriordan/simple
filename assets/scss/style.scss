@@ -20,6 +20,7 @@ Simple is based on _s, created by Automattic.
 //
 
 // Colors
+$white: rgb(255, 255, 255);
 $red: rgb(231, 76, 60);
 $gray: rgb(140, 140, 140);
 $lightGray: rgb(200, 200, 200);
@@ -174,7 +175,7 @@ img {
   bottom: 0;
   width: 170px;
   background-color: white;
-  border-left: 1px solid #f0f0f0;
+  border-left: 1px solid $almostWhite;
   z-index: 998;
   -webkit-transition: all .25s ease-out;
      -moz-transition: all .25s ease-out;
@@ -225,7 +226,7 @@ img {
   outline-style: none;
 }
 .button-navigation:hover {
-  color: rgb(255, 255, 255);
+  color: $white;
   background-color: $red;
   border: 1px solid $red;
 }
@@ -233,7 +234,7 @@ img {
   z-index: 999;
   color: rgb(77, 77, 77);
   background-color: white;
-  border-style: dotted;
+  //border-style: dotted; Firefox does not support dotted curved borders
 }
 .button-close:hover {
 
@@ -314,14 +315,14 @@ a:hover .article-image {
   line-height: 1.5;
 }
 .article-content a {
-  color: #666;
+  color: darken($gray, 10);
   text-decoration: none;
   padding: 0 2px;
-  border-bottom: 2px dotted #aaa;
+  border-bottom: 2px dotted $lightGray;
 }
 .article-content a:hover,
 .article-content a:focus {
-  color: black;
+  color: rgb(0, 0, 0);
   border-bottom: 2px solid $red;
 }
 .article-title a {
@@ -343,7 +344,7 @@ a:hover .article-image {
   border-radius: 23px;
 }
 .button-load-comments:hover {
-  color: rgb(255, 255, 255);
+  color: $white;
   background-color: $red;
   border: 1px solid $red;
 }
@@ -388,7 +389,7 @@ a:hover .article-image {
 }
 .site-pagination li.previous a:hover,
 .site-pagination li.next a:hover {
-  color: rgb(255, 255, 255);
+  color: $white;
   background-color: $red;
   border: 1px solid $red;
 }
@@ -410,7 +411,7 @@ a:hover .article-image {
   width: auto;
 }
 .article-content .more-link:hover {
-  color: rgb(255, 255, 255);
+  color: $white;
   background-color: $red;
   border: 1px solid $red;
 }
@@ -450,7 +451,7 @@ a:hover .article-image {
   background-color: white;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid $almostWhite;
 }
 .single .site-title {
   font-size: 40px;
@@ -487,7 +488,7 @@ a:hover .article-image {
   margin: 10px;
 }
 .wp-caption-text {
-  color: rgb(140,140,140);
+  color: $gray;
   font-family: $headingFont;
   font-size: 14px;
   padding: 5px;
@@ -507,6 +508,20 @@ a:hover .article-image {
 //
 // Admin Bar
 //
-.admin-bar .site-navigation {
-  top: 32px !important;
+.admin-bar .site-header {
+  top: 32px;
+}
+.admin-bar .button-navigation,
+.admin-bar .site-navigation.active .button-close {
+  top: 32px;
+}
+.admin-bar .site-navigation ul {
+  margin-top: 132px;
+}
+.home .button-navigation,
+.home .site-navigation.active .button-close {
+  top: 0;
+}
+.home .site-navigation ul {
+  margin-top: 150px;
 }
