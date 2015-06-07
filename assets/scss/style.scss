@@ -15,15 +15,26 @@ Simple, like WordPress, is licensed under the GPL.
 Simple is based on _s, created by Automattic.
 */
 
+//
 // Variables
+//
 
+//
 // Elements
+//
 body {
   color: rgb(77, 77, 77);
   font-size: 18px;
   line-height: 1.25;
-  font-family: 'Merriweather', garamond, serif;
+  font-family: 'Merriweather', Georgia, serif;
   -webkit-font-smoothing: antialiased;
+  -ms-word-break: break-all;
+      word-break: break-all;
+      word-break: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+
 }
 h1,
 h2,
@@ -31,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 code {
   font-family: monospace;
@@ -55,11 +66,32 @@ blockquote {
   padding: 18px;
   margin-left: 0;
 }
-img,
-.wp-caption {
+cite {
+  color: rgb(0,0,0);
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+img {
   max-width: 100%;
   height: auto;
 }
+
+//
+// Alignment
+//
+.alignright {
+  float: right;
+  padding-left: 10px;
+}
+.alignleft {
+  float: left;
+  padding-right: 10px;
+}
+.aligncenter {
+  margin: 0 auto;
+}
+
 .screen-reader-text {
   position: absolute;
   top: -1000px;
@@ -81,9 +113,13 @@ img,
   margin-top: 70px;
   margin-bottom: 50px;
 }
+
 .pagination-divider {
   margin-top: 80px;
   margin-bottom: 50px;
+}
+.site-main > .article-divider:last-child {
+  display: none;
 }
 
 .button {
@@ -91,9 +127,9 @@ img,
   border: none;
 }
 
-/**
- * Header
- */
+//
+// Header
+//
 .site-header {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -121,9 +157,9 @@ img,
   letter-spacing: -0.1em;
 }
 
-/**
- * Navigation
- */
+//
+// Navigation
+//
 .site-navigation {
   position: fixed;
   top: 0;
@@ -162,16 +198,21 @@ img,
   position: fixed;
   top: 0;
   right: 0;
-  font-size: 24px;
   padding: 16px;
   border: 1px solid rgb(140, 140, 140);
-  border-radius: 40px;
-  margin: 30px 50px;
+  border-radius: 50px;
+  margin: 60px 60px;
   z-index: 1000;
+  vertical-align: middle;
   -webkit-transition: opacity .5s ease-in-out;
      -moz-transition: opacity .5s ease-in-out;
       -ms-transition: opacity .5s ease-in-out;
        -o-transition: opacity .5s ease-in-out;
+}
+.button-navigation .dashicons {
+  font-size: 28px;
+  height: auto;
+  width: auto;
 }
 .button-navigation:focus {
   outline-style: none;
@@ -195,7 +236,7 @@ img,
   right: 0;
 }
 .site-navigation.active .button-navigation {
-  display: none;
+  visibility: hidden;
 }
 .site-navigation.active .button-close {
   position: fixed;
@@ -204,7 +245,7 @@ img,
   padding: 16px;
   border-radius: 36px;
   z-index: 999;
-  display: block;
+  visibility: visible;
 }
 .site-navigation .current-menu-item a {
   color: rgb(231, 76, 60);
@@ -213,9 +254,9 @@ img,
   color: rgb(70, 70, 70);
 }
 
-/**
- * Articles
- */
+//
+// Articles
+//
 .article {
 
 }
@@ -232,7 +273,7 @@ img,
   margin-bottom: 10px;
 }
 a:hover .article-image {
-  border: 1px solid rgb(231, 76, 60);
+  //border: 1px solid rgb(231, 76, 60);
   padding: 0;
   margin-bottom: 10px;
   -webkit-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
@@ -244,8 +285,9 @@ a:hover .article-image {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
+  display: block;
 }
-.article-header:hover .article-date {
+.article:hover .article-date {
   color: rgb(77, 77, 77);
 }
 
@@ -253,6 +295,7 @@ a:hover .article-image {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 0;
+  max-width: 100%;
 }
 .article-title a {
   color: rgb(11,11,11);
@@ -263,7 +306,7 @@ a:hover .article-image {
   text-decoration: none;
 }
 
-.article-content p {
+.article-content {
   line-height: 1.5;
 }
 .article-content a {
@@ -314,9 +357,9 @@ a:hover .article-image {
   display: block;
 }
 
-/**
- * Pagination
- */
+//
+// Pagination
+//
 .site-pagination {
   text-align: center;
   margin: 0 auto 60px;
@@ -329,18 +372,18 @@ a:hover .article-image {
   display: inline-block;
   margin-top: 20px;
 }
-.site-pagination a.previous,
-.site-pagination a.next {
+.site-pagination li.previous a,
+.site-pagination li.next a {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: rgb(140, 140, 140);
   padding: 5px 15px;
-  border: 1px dotted rgb(140, 140, 140);
+  border: 1px solid rgb(200, 200, 200);
   text-decoration:none;
   border-radius: 23px;
 }
-.site-pagination a.previous:hover,
-.site-pagination a.next:hover {
+.site-pagination li.previous a:hover,
+.site-pagination li.next a:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(231, 76, 60);
   border: 1px solid rgb(231, 76, 60);
@@ -352,9 +395,25 @@ a:hover .article-image {
 
 }
 
-/**
- * Footer
- */
+.article-content .more-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: rgb(140, 140, 140);
+  padding: 5px 15px;
+  border: 1px solid rgb(200, 200, 200);
+  text-decoration:none;
+  border-radius: 23px;
+  width: auto;
+}
+.article-content .more-link:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(231, 76, 60);
+  border: 1px solid rgb(231, 76, 60);
+}
+
+//
+// Footer
+//
 .site-footer {
   color: rgb(140, 140, 140);
   font-size: 14px;
@@ -372,11 +431,11 @@ a:hover .article-image {
 }
 
 
-/**
- * Single Posts
- */
+//
+// Single Posts
+//
+
 .single .site-header {
-  padding-top: 0;
   text-align: left;
   position: fixed;
   top: 0;
@@ -385,6 +444,7 @@ a:hover .article-image {
   width: auto;
   z-index: 997;
   background-color: white;
+  padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -399,8 +459,10 @@ a:hover .article-image {
 }
 
 .single .button-navigation {
-  font-size: 16px;
   margin-top: 10px;
+}
+.single .button-navigation .dashicons {
+  font-size: 16px;
 }
 .single .site-navigation ul {
   margin-top: 100px;
@@ -412,6 +474,35 @@ a:hover .article-image {
 }
 
 
-/**
- * Media Queries
- */
+//
+// Media
+//
+.wp-caption {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+.wp-caption-text {
+  color: rgb(140,140,140);
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0;
+  max-width: 100%;
+}
+
+//
+// Galleries
+//
+/*.gallery-item {
+  padding: 10px;
+}*/
+
+
+
+//
+// Admin Bar
+//
+.admin-bar .site-navigation {
+  top: 32px !important;
+}

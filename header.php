@@ -20,8 +20,31 @@
     <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
   </header><!-- .site-header -->
 
-  <nav id="nav" class="site-navigation" role="navigation">
+<?php
+  // Only display markup if the menu exists
+  if ( has_nav_menu( 'primary' ) ) : ?>
 
-  </nav>
+    <nav id="nav" class="site-navigation" role="navigation">
+      <button id="navButton" class="button button-navigation">
+        <!--<i class="fa fa-bars fa-fw"></i>-->
+        <i class="dashicons dashicons-menu"></i>
+        <span class="screen-reader-text">Menu</span>
+      </button>
+      <button  id="navClose" class="button button-navigation button-close">
+        <!--<i class="fa fa-times fa-fw"></i>-->
+        <i class="dashicons dashicons-no"></i>
+        <span class="screen-reader-text">Menu</span>
+      </button>
+
+      <?php
+        wp_nav_menu( array(
+          'theme_location' => 'primary',
+          'container' => 'false',
+          'menu_class' => 'nav navbar-nav'
+        ) );
+      ?>
+    </nav>
+
+  <?php endif; ?>
 
   <main id="primary" class="site-main" role="main">

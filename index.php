@@ -2,6 +2,7 @@
 /**
  * Simple's main template file
  */
+
 get_header();
 
 if ( have_posts() ) :
@@ -13,7 +14,8 @@ if ( have_posts() ) :
 
   endwhile;
 
+  simple_site_pagination();
+
 endif;
 
 get_footer();
-?>
