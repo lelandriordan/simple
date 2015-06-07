@@ -17,8 +17,6 @@ Simple is based on _s, created by Automattic.
 
 // Variables
 
-
-
 // Elements
 body {
   color: rgb(77, 77, 77);
@@ -34,9 +32,6 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
-}
-img {
-  max-width: 100%;
 }
 code {
   font-family: monospace;
@@ -60,7 +55,11 @@ blockquote {
   padding: 18px;
   margin-left: 0;
 }
-
+img,
+.wp-caption {
+  max-width: 100%;
+  height: auto;
+}
 .screen-reader-text {
   position: absolute;
   top: -1000px;

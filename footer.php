@@ -3,10 +3,12 @@
  * Simple's footer template
  */
  ?>
- <footer id="colophon" class="site-footer">
- </footer>
+</main><!-- .site-main -->
+<footer id="colophon" class="site-footer">
 
- <?php wp_footer(); ?>
- 
- </body>
- </html>
+</footer><!-- .site-footer -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
