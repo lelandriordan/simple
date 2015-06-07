@@ -1,0 +1,413 @@
+/*
+Theme Name: _s
+Theme URI: http://underscores.me/
+Author: Automattic
+Author URI: http://automattic.com/
+Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: _s
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+body {
+  color: rgb(77, 77, 77);
+  font-size: 18px;
+  line-height: 1.25;
+  font-family: 'Merriweather', garamond, serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+img {
+  max-width: 100%;
+}
+code {
+  font-family: monospace;
+  white-space: pre;
+  background-color: rgb(245, 245, 245);
+  padding: 1px 5px;
+}
+pre {
+  display: block;
+  font-size: 14px;
+  font-family: monospace;
+  white-space: pre;
+  padding: 16px;
+  /*border: 1px solid #f0f0f0;*/
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(245, 245, 245);
+  overflow-x: scroll;
+}
+blockquote {
+  border-left: 5px solid rgb(231, 76, 60);
+  padding: 18px;
+  margin-left: 0;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+.divider {
+  width: auto;
+  max-width: 100%;
+  height: 1px;
+  background-color: #f0f0f0;
+  display: block;
+  clear: both;
+  border-width: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.article-divider {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.pagination-divider {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.button {
+  background-color: white;
+  border: none;
+}
+
+/**
+ * Header
+ */
+.site-header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 72px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.site-title a {
+  color: rgb(231, 76, 60);
+  text-decoration: none;
+  letter-spacing: -0.1em;
+}
+.site-title a:hover {
+  color: rgb(70, 70, 70);
+}
+.site-description {
+  color: rgb(140,140,140);
+  font-weight: 400;
+  margin-top: 0;
+  letter-spacing: -0.1em;
+}
+
+/**
+ * Navigation
+ */
+.site-navigation {
+  position: fixed;
+  top: 0;
+  right: -170px;
+  bottom: 0;
+  width: 170px;
+  background-color: white;
+  border-left: 1px solid #f0f0f0;
+  z-index: 998;
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+
+.site-navigation ul {
+  margin-top: 120px;
+  list-style-type: none;
+  padding-left: 0;
+}
+.site-navigation ul li {
+  padding: 10px 15px;
+}
+.site-navigation a {
+  color: rgb(140, 140, 140);
+  text-decoration: none;
+}
+.site-navigation a:hover {
+  color: rgb(77, 77, 77);
+}
+
+.button-navigation {
+  color: white;
+  background-color: rgb(140, 140, 140);
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  padding: 16px;
+  border: 1px solid rgb(140, 140, 140);
+  border-radius: 40px;
+  margin: 30px 50px;
+  z-index: 1000;
+  -webkit-transition: opacity .5s ease-in-out;
+     -moz-transition: opacity .5s ease-in-out;
+      -ms-transition: opacity .5s ease-in-out;
+       -o-transition: opacity .5s ease-in-out;
+}
+.button-navigation:focus {
+  outline-style: none;
+}
+.button-navigation:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(231, 76, 60);
+  border: 1px solid rgb(231, 76, 60);
+}
+.button-close {
+  z-index: 999;
+  color: rgb(77, 77, 77);
+  background-color: white;
+  border-style: dotted;
+}
+.button-close:hover {
+
+}
+
+.site-navigation.active {
+  right: 0;
+}
+.site-navigation.active .button-navigation {
+  display: none;
+}
+.site-navigation.active .button-close {
+  position: fixed;
+  top: 0;
+  right: 300;
+  padding: 16px;
+  border-radius: 36px;
+  z-index: 999;
+  display: block;
+}
+.site-navigation .current-menu-item a {
+  color: rgb(231, 76, 60);
+}
+.site-navigation .current-menu-item a:hover {
+  color: rgb(70, 70, 70);
+}
+
+/**
+ * Articles
+ */
+.article {
+
+}
+.article-header,
+.article-content,
+.article-footer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.article-image {
+  max-width: 100%;
+  padding: 1px;
+  margin-bottom: 10px;
+}
+a:hover .article-image {
+  border: 1px solid rgb(231, 76, 60);
+  padding: 0;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
+     -moz-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
+          box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
+}
+.article-date {
+  color: rgb(200, 200, 200);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.article-header:hover .article-date {
+  color: rgb(77, 77, 77);
+}
+
+.article-title {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.article-title a {
+  color: rgb(11,11,11);
+  text-decoration: none;
+}
+.article-title a:hover {
+  color: rgb(231, 76, 60);
+  text-decoration: none;
+}
+
+.article-content p {
+  line-height: 1.5;
+}
+.article-content a {
+  color: #666;
+  text-decoration: none;
+  padding: 0 2px;
+  border-bottom: 2px dotted #aaa;
+}
+.article-content a:hover,
+.article-content a:focus {
+  color: black;
+  border-bottom: 2px solid rgb(231, 76, 60);
+}
+.article-title a {
+  color: black;
+}
+
+.article-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+.button-load-comments {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: rgb(140, 140, 140);
+  padding: 10px 25px;
+  border: 1px dotted rgb(140, 140, 140);
+  text-decoration:none;
+  border-radius: 23px;
+}
+.button-load-comments:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(231, 76, 60);
+  border: 1px solid rgb(231, 76, 60);
+}
+.comments-area {
+  display: none;
+  position: relative;
+  text-align: left;
+  margin-top: 50px;
+  -webkit-transition: all 10s ease-out;
+     -moz-transition: all 10s ease-out;
+      -ms-transition: all 10s ease-out;
+       -o-transition: all 10s ease-out;
+}
+.active .comments-area {
+  display: block;
+}
+
+/**
+ * Pagination
+ */
+.site-pagination {
+  text-align: center;
+  margin: 0 auto 60px;
+}
+.site-pagination ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.site-pagination ul li {
+  display: inline-block;
+  margin-top: 20px;
+}
+.site-pagination a.previous,
+.site-pagination a.next {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: rgb(140, 140, 140);
+  padding: 5px 15px;
+  border: 1px dotted rgb(140, 140, 140);
+  text-decoration:none;
+  border-radius: 23px;
+}
+.site-pagination a.previous:hover,
+.site-pagination a.next:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(231, 76, 60);
+  border: 1px solid rgb(231, 76, 60);
+}
+.site-pagination ul li a.previous {
+
+}
+.site-pagination ul li a.next {
+
+}
+
+/**
+ * Footer
+ */
+.site-footer {
+  color: rgb(140, 140, 140);
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+.site-footer a {
+  text-decoration: none;
+  color: rgb(200, 200, 200);
+  font-weight: 700;
+}
+.site-footer a:hover {
+  color: rgb(231, 76, 60);
+}
+
+
+/**
+ * Single Posts
+ */
+.single .site-header {
+  padding-top: 0;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 997;
+  background-color: white;
+  padding-bottom: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.single .site-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.single .site-description {
+  font-size: 22px;
+  display: none;
+}
+
+.single .button-navigation {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.single .site-navigation ul {
+  margin-top: 100px;
+  list-style-type: none;
+  padding-left: 0;
+}
+.single .site-main {
+  margin-top: 120px;
+}
+
+
+/**
+ * Media Queries
+ */
