@@ -4,7 +4,7 @@ Simple
 As WordPress has grown from small blogging platform to full blown CMS, WordPress themes have evolved into massive overly complex monstrosities. Inspired by Svtble and Medium, Simple is a minimal theme designed to get rid of theme bloat and back to the basics of blogging.
 
 ## Basic Usage
-Download the zip and upload it to the WordPress backend. Once the browser specific kinks are worked out, Simple will be submitted to the WordPress theme repository.
+Download the zip and upload it to the WordPress backend. Eventually Simple will be submitted to the WordPress theme repository.
 
 ## Developer Usage
 
