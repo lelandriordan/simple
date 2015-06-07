@@ -12,7 +12,7 @@ var paths = {
 gulp.task('styles', function() {
   return sass(paths.styles.src)
   .on('error', function(e) {
-    console.error('Error!', e.message);
+    console.error('Error! ', e.message);
   })
   .pipe(gulp.dest(paths.styles.dest));
 });
