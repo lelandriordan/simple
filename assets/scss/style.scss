@@ -19,6 +19,16 @@ Simple is based on _s, created by Automattic.
 // Variables
 //
 
+// Colors
+$red: rgb(231, 76, 60);
+$gray: rgb(140, 140, 140);
+$lightGray: rgb(200, 200, 200);
+$almostWhite: rgb(240, 240, 240);
+
+// Fonts
+$bodyFont: 'Merriweather', Georgia, serif;
+$headingFont: 'Montserrat', Helvetica, Arial, sans-serif;
+
 //
 // Elements
 //
@@ -26,7 +36,7 @@ body {
   color: rgb(77, 77, 77);
   font-size: 18px;
   line-height: 1.25;
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: $bodyFont;
   -webkit-font-smoothing: antialiased;
   -ms-word-break: break-all;
       word-break: break-all;
@@ -42,12 +52,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: $headingFont;
 }
 code {
   font-family: monospace;
   white-space: pre;
-  background-color: rgb(245, 245, 245);
+  background-color: $almostWhite;
   padding: 1px 5px;
 }
 pre {
@@ -56,21 +66,18 @@ pre {
   font-family: monospace;
   white-space: pre;
   padding: 16px;
-  /*border: 1px solid #f0f0f0;*/
-  background-color: rgb(250, 250, 250);
-  border: 1px solid rgb(245, 245, 245);
+  background-color: lighten($almostWhite, 5);
+  border: 1px solid $almostWhite;
   overflow-x: scroll;
 }
 blockquote {
-  border-left: 5px solid rgb(231, 76, 60);
+  border-left: 5px solid $red;
   padding: 18px;
   margin-left: 0;
 }
 cite {
-  color: rgb(0,0,0);
-  display: block;
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 16px;
+  font-style: italic;
 }
 img {
   max-width: 100%;
@@ -102,7 +109,7 @@ img {
   width: auto;
   max-width: 100%;
   height: 1px;
-  background-color: #f0f0f0;
+  background-color: $almostWhite;
   display: block;
   clear: both;
   border-width: 0;
@@ -143,7 +150,7 @@ img {
   margin-bottom: 0;
 }
 .site-title a {
-  color: rgb(231, 76, 60);
+  color: $red;
   text-decoration: none;
   letter-spacing: -0.1em;
 }
@@ -185,7 +192,7 @@ img {
   padding: 10px 15px;
 }
 .site-navigation a {
-  color: rgb(140, 140, 140);
+  color: $gray;
   text-decoration: none;
 }
 .site-navigation a:hover {
@@ -194,12 +201,12 @@ img {
 
 .button-navigation {
   color: white;
-  background-color: rgb(140, 140, 140);
+  background-color: $gray;
   position: fixed;
   top: 0;
   right: 0;
   padding: 16px;
-  border: 1px solid rgb(140, 140, 140);
+  border: 1px solid $gray;
   border-radius: 50px;
   margin: 60px 60px;
   z-index: 1000;
@@ -219,8 +226,8 @@ img {
 }
 .button-navigation:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(231, 76, 60);
-  border: 1px solid rgb(231, 76, 60);
+  background-color: $red;
+  border: 1px solid $red;
 }
 .button-close {
   z-index: 999;
@@ -248,7 +255,7 @@ img {
   visibility: visible;
 }
 .site-navigation .current-menu-item a {
-  color: rgb(231, 76, 60);
+  color: $red;
 }
 .site-navigation .current-menu-item a:hover {
   color: rgb(70, 70, 70);
@@ -273,16 +280,13 @@ img {
   margin-bottom: 10px;
 }
 a:hover .article-image {
-  //border: 1px solid rgb(231, 76, 60);
+  border: 1px solid $red;
   padding: 0;
   margin-bottom: 10px;
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
-     -moz-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
-          box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
 }
 .article-date {
-  color: rgb(200, 200, 200);
-  font-family: 'Montserrat', sans-serif;
+  color: $lightGray;
+  font-family: $headingFont;
   font-size: 14px;
   text-transform: uppercase;
   display: block;
@@ -302,7 +306,7 @@ a:hover .article-image {
   text-decoration: none;
 }
 .article-title a:hover {
-  color: rgb(231, 76, 60);
+  color: $red;
   text-decoration: none;
 }
 
@@ -318,7 +322,7 @@ a:hover .article-image {
 .article-content a:hover,
 .article-content a:focus {
   color: black;
-  border-bottom: 2px solid rgb(231, 76, 60);
+  border-bottom: 2px solid $red;
 }
 .article-title a {
   color: black;
@@ -329,19 +333,19 @@ a:hover .article-image {
   text-align: center;
 }
 .button-load-comments {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $headingFont;
   font-size: 22px;
   text-transform: uppercase;
-  color: rgb(140, 140, 140);
+  color: $gray;
   padding: 10px 25px;
-  border: 1px dotted rgb(140, 140, 140);
+  border: 1px dotted $gray;
   text-decoration:none;
   border-radius: 23px;
 }
 .button-load-comments:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(231, 76, 60);
-  border: 1px solid rgb(231, 76, 60);
+  background-color: $red;
+  border: 1px solid $red;
 }
 .comments-area {
   display: none;
@@ -374,19 +378,19 @@ a:hover .article-image {
 }
 .site-pagination li.previous a,
 .site-pagination li.next a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $headingFont;
   font-size: 16px;
-  color: rgb(140, 140, 140);
+  color: $gray;
   padding: 5px 15px;
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid $lightGray;
   text-decoration:none;
   border-radius: 23px;
 }
 .site-pagination li.previous a:hover,
 .site-pagination li.next a:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(231, 76, 60);
-  border: 1px solid rgb(231, 76, 60);
+  background-color: $red;
+  border: 1px solid $red;
 }
 .site-pagination ul li a.previous {
 
@@ -396,38 +400,38 @@ a:hover .article-image {
 }
 
 .article-content .more-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $headingFont;
   font-size: 16px;
-  color: rgb(140, 140, 140);
+  color: $gray;
   padding: 5px 15px;
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid $lightGray;
   text-decoration:none;
   border-radius: 23px;
   width: auto;
 }
 .article-content .more-link:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(231, 76, 60);
-  border: 1px solid rgb(231, 76, 60);
+  background-color: $red;
+  border: 1px solid $red;
 }
 
 //
 // Footer
 //
 .site-footer {
-  color: rgb(140, 140, 140);
+  color: $gray;
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $headingFont;
   text-align: center;
   text-transform: uppercase;
 }
 .site-footer a {
   text-decoration: none;
-  color: rgb(200, 200, 200);
+  color: $lightGray;
   font-weight: 700;
 }
 .site-footer a:hover {
-  color: rgb(231, 76, 60);
+  color: $red;
 }
 
 
@@ -484,7 +488,7 @@ a:hover .article-image {
 }
 .wp-caption-text {
   color: rgb(140,140,140);
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: $headingFont;
   font-size: 14px;
   padding: 5px;
   margin: 0;

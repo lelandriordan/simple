@@ -18,7 +18,7 @@ body {
   color: #4d4d4d;
   font-size: 18px;
   line-height: 1.25;
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -ms-word-break: break-all;
   word-break: break-all;
@@ -33,12 +33,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
+  font-family: "Montserrat", Helvetica, Arial, sans-serif; }
 
 code {
   font-family: monospace;
   white-space: pre;
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   padding: 1px 5px; }
 
 pre {
@@ -47,9 +47,8 @@ pre {
   font-family: monospace;
   white-space: pre;
   padding: 16px;
-  /*border: 1px solid #f0f0f0;*/
-  background-color: #fafafa;
-  border: 1px solid whitesmoke;
+  background-color: #fdfdfd;
+  border: 1px solid #f0f0f0;
   overflow-x: scroll; }
 
 blockquote {
@@ -58,10 +57,8 @@ blockquote {
   margin-left: 0; }
 
 cite {
-  color: black;
-  display: block;
-  font-size: 14px;
-  margin-top: 5px; }
+  font-size: 16px;
+  font-style: italic; }
 
 img {
   max-width: 100%;
@@ -233,15 +230,13 @@ img {
   margin-bottom: 10px; }
 
 a:hover .article-image {
+  border: 1px solid #e74c3c;
   padding: 0;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
-  -moz-box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6);
-  box-shadow: 0px 0px 1px 0px rgba(231, 76, 60, 0.6); }
+  margin-bottom: 10px; }
 
 .article-date {
   color: #c8c8c8;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   display: block; }
@@ -285,7 +280,7 @@ a:hover .article-image {
   text-align: center; }
 
 .button-load-comments {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   color: #8c8c8c;
@@ -326,7 +321,7 @@ a:hover .article-image {
 
 .site-pagination li.previous a,
 .site-pagination li.next a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #8c8c8c;
   padding: 5px 15px;
@@ -341,7 +336,7 @@ a:hover .article-image {
   border: 1px solid #e74c3c; }
 
 .article-content .more-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #8c8c8c;
   padding: 5px 15px;
@@ -358,7 +353,7 @@ a:hover .article-image {
 .site-footer {
   color: #8c8c8c;
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   text-align: center;
   text-transform: uppercase; }
 
@@ -413,7 +408,7 @@ a:hover .article-image {
 
 .wp-caption-text {
   color: #8c8c8c;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 14px;
   padding: 5px;
   margin: 0;
