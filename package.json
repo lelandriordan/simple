@@ -1,6 +1,6 @@
 {
   "name": "simple",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple WordPress theme",
   "main": "index.js",
   "private": true,
